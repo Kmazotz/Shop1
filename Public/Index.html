@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Brayan A.">
+  <meta name="keywords" content="Shop, Boutique, Glasses, SunGlasses, Glass, Gafas, Gafas de sol, tienda de gafas">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <link rel="stylesheet" href="../App/Components/Helpers/MaterialComponents/material-components-web.min.css">
+  <link rel="stylesheet" href="../App/Components/Stylesheet/master.css">
+  <title>Shop 1 - home</title>
+</head>
+<body>
+  <div class="large-menu">
+
+    <div class="menu-container">
+      <div class="logotype">
+        <p class="logoText">Glasses<span class="emphasis w-bold">Shop</span></p>
+      </div>
+
+      <div class="searchBar">
+        <div class="input-icon">
+          <span class="search-icon"><i class="fas fa-search"></i></span>
+          <input type="text" id="Search" class="input-large w-bold" placeholder="¿Que deseas buscar?" maxlength="45">
+        </div>
+      </div>
+
+      <div class="menuitems">
+        <a href="#!" id="openCart"><span class="shopping-bag"><i class="fas fa-shopping-bag"></i><span class="quantity rounded"><p class="w-bold">0</p></span></span></a>
+        <a href="#!" class="sesion w-bolder">Sign In</a>
+        <a href="#!" class="sesion w-bolder">Log In</a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="mobileMenu">
+    <a class="openSearch" id="openSearch">
+      <i class="fas fa-search"></i>
+    </a>
+    <div class="searchBar">
+        <input type="text" id="Search" class="input-large w-bold" placeholder="¿Que deseas buscar?" maxlength="45">
+        <span class="closeSearch" id="closeSearch">
+          <i class="fa fa-times"></i>
+        </span>
+
+    </div>
+
+    <div class="menuitems">
+      <a href="#!" id="openCart"><span class="shopping-bag"><i class="fas fa-shopping-bag"></i><span class="quantity rounded"><p class="w-bold">0</p></span></span></a>
+      <a href="#!" class="sesion w-bolder">Sign In</a>
+      <a href="#!" class="sesion w-bolder">Log In</a>
+    </div>
+
+  </div>
+
+  <div class="column filter" id="filterOptions">
+
+    <div class="filterControlls">
+      <span class="w-bolder">Filtrar Por</span><a href="#!" id="closeFilter"><i class="fas fa-times"></i></a>
+    </div>
+    <!--Category-->
+    <div class="contentOptions">
+      <div class="OptionHead">
+        <span class="w-bold">Categorias</span>
+        <i class="fas fa-times"></i>
+      </div>
+
+      <div class="filterItems">
+        <div class="mdc-form-field">
+          <div class="mdc-checkbox">
+            <input type="checkbox"
+                   class="mdc-checkbox__native-control"
+                   id="category-1" name="group1[]" value="Man"/>
+            <div class="mdc-checkbox__background">
+              <svg class="mdc-checkbox__checkmark"
+                   viewBox="0 0 24 24">
+                <path class="mdc-checkbox__checkmark-path"
+                      fill="none"
+                      d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+              </svg>
+              <div class="mdc-checkbox__mixedmark"></div>
+            </div>
+          </div>
+            <label for="category-1">Hombre</label>
+        </div>
+      </div>
+
+      <div class="filterItems">
+        <div class="mdc-form-field">
+          <div class="mdc-checkbox">
+            <input type="checkbox"
+                   class="mdc-checkbox__native-control"
+                   id="category-2" name="group1[]" value="Woman"/>
+            <div class="mdc-checkbox__background">
+              <svg class="mdc-checkbox__checkmark"
+                   viewBox="0 0 24 24">
+                <path class="mdc-checkbox__checkmark-path"
+                      fill="none"
+                      d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+              </svg>
+              <div class="mdc-checkbox__mixedmark"></div>
+            </div>
+          </div>
+            <label for="category-2">Mujer</label>
+        </div>
+      </div>
+
+      <div class="filterItems">
+        <div class="mdc-form-field">
+          <div class="mdc-checkbox">
+            <input type="checkbox"
+                   class="mdc-checkbox__native-control"
+                   id="category-3" name="group1[]" value="Kids"/>
+            <div class="mdc-checkbox__background">
+              <svg class="mdc-checkbox__checkmark"
+                   viewBox="0 0 24 24">
+                <path class="mdc-checkbox__checkmark-path"
+                      fill="none"
+                      d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+              </svg>
+              <div class="mdc-checkbox__mixedmark"></div>
+            </div>
+          </div>
+            <label for="category-3">Niños</label>
+        </div>
+      </div>
+
+      <div class="filterItems">
+        <div class="mdc-form-field">
+          <div class="mdc-checkbox">
+            <input type="checkbox"
+                   class="mdc-checkbox__native-control"
+                   id="category-4" name="group1[]" value="All" checked/>
+            <div class="mdc-checkbox__background">
+              <svg class="mdc-checkbox__checkmark"
+                   viewBox="0 0 24 24">
+                <path class="mdc-checkbox__checkmark-path"
+                      fill="none"
+                      d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+              </svg>
+              <div class="mdc-checkbox__mixedmark"></div>
+            </div>
+          </div>
+            <label for="category-4">Todo</label>
+        </div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <!--Colection-->
+    <div class="contentOptions">
+      <div class="OptionHead">
+        <span class="w-bold">Colección</span>
+        <i class="fas fa-times"></i>
+      </div>
+
+      <div class="filterItems">
+        <div class="mdc-form-field">
+          <div class="mdc-checkbox">
+            <input type="checkbox"
+                   class="mdc-checkbox__native-control"
+                   id="colection-1" name="group2[]" value="Winter"/>
+            <div class="mdc-checkbox__background">
+              <svg class="mdc-checkbox__checkmark"
+                   viewBox="0 0 24 24">
+                <path class="mdc-checkbox__checkmark-path"
+                      fill="none"
+                      d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+              </svg>
+              <div class="mdc-checkbox__mixedmark"></div>
+            </div>
+          </div>
+            <label for="colection-1">Winter</label>
+        </div>
+      </div>
+
+      <div class="filterItems">
+        <div class="mdc-form-field">
+          <div class="mdc-checkbox">
+            <input type="checkbox"
+                   class="mdc-checkbox__native-control"
+                   id="colection-2" name="group2[]" value="Originals"/>
+            <div class="mdc-checkbox__background">
+              <svg class="mdc-checkbox__checkmark"
+                   viewBox="0 0 24 24">
+                <path class="mdc-checkbox__checkmark-path"
+                      fill="none"
+                      d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+              </svg>
+              <div class="mdc-checkbox__mixedmark"></div>
+            </div>
+          </div>
+            <label for="colection-2">Originals</label>
+        </div>
+      </div>
+      <div class="filterItems">
+        <div class="mdc-form-field">
+          <div class="mdc-checkbox">
+            <input type="checkbox"
+                   class="mdc-checkbox__native-control"
+                   id="colection-3" name="group2[]" value="Summer"/>
+            <div class="mdc-checkbox__background">
+              <svg class="mdc-checkbox__checkmark"
+                   viewBox="0 0 24 24">
+                <path class="mdc-checkbox__checkmark-path"
+                      fill="none"
+                      d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+              </svg>
+              <div class="mdc-checkbox__mixedmark"></div>
+            </div>
+          </div>
+            <label for="colection-3">Summer</label>
+        </div>
+      </div>
+      <div class="filterItems">
+        <div class="mdc-form-field">
+          <div class="mdc-checkbox">
+            <input type="checkbox"
+                   class="mdc-checkbox__native-control"
+                   id="colection-4" name="group2[]" value="All" checked/>
+            <div class="mdc-checkbox__background">
+              <svg class="mdc-checkbox__checkmark"
+                   viewBox="0 0 24 24">
+                <path class="mdc-checkbox__checkmark-path"
+                      fill="none"
+                      d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+              </svg>
+              <div class="mdc-checkbox__mixedmark"></div>
+            </div>
+          </div>
+            <label for="colection-4">Todo</label>
+        </div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <!--Price-->
+    <div class="contentOptions">
+      <div class="OptionHead">
+        <span class="w-bold">Precio</span>
+        <i class="fas fa-times"></i>
+      </div>
+      <div class="filterItems">
+        <input type="range" min="10000000" max="100000000" value="10000000" id="Price" class="range">
+        <div class="currency">
+          <span id="minPrice"></span><i>-</i><span id="maxPrice" class="maxPrice"></span>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="contentOptions">
+      <button class="dark btn w-bold" id="addFilter"><span>Filtrar</span></button>
+    </div>
+
+  </div>
+
+  <div class="column products" >
+
+    <div class="filterAction">
+      <a href="#!" id="OpenFilter" class="w-bold"><span>Filtrar Por<i class="fas fa-angle-down"></i></span></a>
+      <a href="#!" id="openOrderBy" class="w-bold"><span>Ordenar por<i class="fas fa-angle-down"></i></span></a>
+    </div>
+
+    <div class="container">
+
+      <div class="wrap">
+
+        <div id="itemPage" class="itemPage">
+
+          <!--ShowProducts-->
+
+        </div>
+
+      </div>
+
+    </div>
+
+      <div class="paginate">
+
+        <div id="paginator" class="paginator"></div>
+
+      </div>
+
+  </div>
+
+  </div>
+
+  <div class="shoppingCart" id="shoppingCart">
+    <div class="shoppingCartControls">
+      <span class="w-bolder">Tu Carrito</span><a href="#!" id="closeShoppingCart"><i class="fas fa-times"></i></a>
+    </div>
+
+    <div class="shoppingCartItems">
+      <div class="cartItems">
+          <!--ItemDemo-->
+          <div class="itemProperty">
+            <div class="ImageIcon">
+
+            </div>
+            <div class="itemInfo">
+                <div class="infoCart">
+                  <span id="productName">Lorem Ipsum</span>
+                </div>
+                <div class="infoCart">
+                  <div class="inputCart">
+                    <button type="button" id="subtractCant"><i class="fas fa-minus"></i></button>
+                    <input type="text" id="itemCant" class="w-bold" maxlength="3" value="0"/>
+                    <button type="button" id="addCant"><i class="fas fa-plus"></i></button>
+                  </div>
+                </div>
+                <div class="infoCart">
+                  <span id="productPrice">$100,000</span>
+                </div>
+            </div>
+            <div class="removeItem">
+              <i class="fas fa-trash-alt"></i>
+            </div>
+          </div>
+          <!--ItemDemo-->
+      </div>
+      <div class="shoppingCartInfo">
+          <div class="shoppingContainerItem">
+            <span class="cantProduct w-bold emphasis">( <span id="cantProduct" class="w-bold emphasis">0</span> ) Productos</span>
+          </div>
+          <div class="shoppingContainerItem">
+            <span class="price" id="totalPrice">$100,000</span>
+          </div>
+          <div class="shoppingContainerItem">
+            <button><span class="w-bold">Check Out</span><i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<script src="../App/Components/Script/JQuery/jquery-3.3.1.js" charset="utf-8"></script>
+<script src="../App/Components/Script/JQuery/jquery.twbsPagination.js" charset="utf-8"></script>
+<script src="../App/Components/Script/Dinero/dinero.js" charset="utf-8"></script>
+<script src="../App/Components/Script/Material/material-components-web.min.js" charset="utf-8"></script>
+<script src="../App/Controllers/Main/main.js" charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,661 @@
+$neutral: #E7DACB
+$dark: #21374B
+$red: #BE4248
+$grey: #586473
+$blue: #4A89AA
+$white: #FFFFFF
+
+//menu
+.large-menu
+  width: 100%
+  height: 80px
+  display: flex
+  flex-wrap: wrap
+  background: $red
+  align-content: space-around
+  align-items: center
+  user-select: none
+
+  .menu-container
+    width: 100%
+    height: auto
+    display: flex
+    flex-wrap: wrap
+
+  .logotype
+    width: 20%
+    min-width: 100px
+    height: auto
+    display: flex
+    flex-wrap: wrap
+    align-content: center
+    align-items: center
+
+    .logoText
+      width: auto
+      height: auto
+      font-size: 2.3em
+      position: relative
+      margin: auto
+      color: $neutral
+
+  .searchBar
+    width: calc(100% - 40%)
+    min-width: 100px
+    display: flex
+    flex-wrap: wrap
+
+    .input-icon
+      width: 80%
+      min-width: 100px
+      display: flex
+      position: relative
+      margin: auto
+      background: $neutral
+
+      .search-icon
+        width: 30px
+        height: auto
+        font-size: 1.5em
+        color: $grey
+        display: flex
+        align-content: center
+        align-items: center
+        text-align: center
+        padding-left: 10px
+
+      .input-large
+        width: calc(100% - 40px)
+        min-width: 200px
+        padding: 10px 10px
+        border: none
+        background: transparent
+        font-size: 1.5em
+
+  .menuitems
+    width: 20%
+    min-width: 100px
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-around
+    flex-flow: row wrap
+
+    .shopping-bag
+      display: flex
+      flex-wrap: wrap
+      letter-spacing: 5px
+
+      i
+        font-size: 1.5em
+        color: $neutral
+
+      .quantity
+        width: 25px
+        height: 25px
+        display: flex
+        align-content: center
+        align-items: center
+        background: $grey
+
+        p
+          width: auto
+          height: auto
+          position: relative
+          margin: auto
+          color: $neutral
+          font-size: 1.2em
+          text-align: right
+          overflow: hidden
+
+    .sesion
+      font-size: 1em
+      color: $neutral
+
+.mobileMenu
+  display: none
+
+//menu
+
+.w-100
+  font-weight: 100
+
+.w-200
+  font-weight: 200
+
+.w-300
+  font-weight: 300
+
+.w-400
+  font-weight: 400
+
+.w-500
+  font-weight: 500
+
+.w-600
+  font-weight: 600
+
+.w-bold
+  font-weight: bold
+
+.w-bolder
+  font-weight: bolder
+
+.w-lighter
+  font-weight: lighter
+
+.emphasis
+  color: $dark
+
+.rounded
+  border-radius: 50%
+
+.round
+  border-radius: 50px
+
+.column
+  width: auto
+  height: auto
+  display: flex
+  flex-flow: column
+  user-select: none
+
+.filter
+  width: 350px
+  padding-top: 50px
+  min-width: 250px
+  height: auto
+  position: relative
+  display: flex
+  flex-wrap: wrap
+  align-content: center
+  align-items: center
+  padding-bottom: 100px
+
+  .filterControlls
+    width: 100%
+    height: 50px
+    background: $dark
+    display: none
+    flex-wrap: wrap
+    align-items: center
+    align-content: center
+    position: relative
+    top: -50px
+
+    a
+      width: 50px
+      height: 50px
+      display: flex
+      flex-wrap: wrap
+      color: $neutral
+      align-items: center
+      align-content: center
+      justify-content: center
+
+      i
+        font-size: 1.5em
+
+    span
+      text-transform: uppercase
+      width: calc(100% - 50px)
+      display: flex
+      flex-wrap: wrap
+      color: $neutral
+      justify-content: center
+
+  .contentOptions
+    width: 80%
+    height: auto
+    display: flex
+    flex-wrap: wrap
+    align-content: center
+    align-items: center
+
+    .OptionHead
+      width: 100%
+      height: 40px
+      display: flex
+      flex-wrap: wrap
+      align-content: center
+      align-items: center
+
+      span
+        width: calc(100% - 40px)
+        height: 100%
+        display: flex
+        flex-wrap: wrap
+        align-content: center
+        align-items: center
+        position: relative
+        left: 20px
+
+      i
+        width: 20px
+        position: relative
+        display: flex
+        flex-wrap: wrap
+        height: 100%
+        align-content: center
+        align-items: center
+
+    button.dark
+      background: $grey
+      color: $neutral
+      position: relative
+
+    button.btn
+      width: 80%
+      height: auto
+      padding: 10px 0px
+      border-radius: 5px
+      display: flex
+      flex-wrap: wrap
+      align-content: center
+      align-items: center
+      margin: auto
+      border: none
+      top: 50px
+      text-align: center
+
+      span
+        position: relative
+        margin: auto
+
+      &:hover
+        cursor: pointer
+
+      &:focus
+        outline: none
+
+      &::after
+        color: $neutral
+        font-size: 1.5em
+
+    .filterItems
+      width: 100%
+      height: auto
+      display: block
+
+      .range
+        width: 80%
+        height: 5px
+        position: relative
+        margin: auto
+        -webkit-appearance: none
+        background: $grey
+        outline: none
+        opacity: 0.7
+        -webkit-transition: .2s
+        transition: opacity .2s
+        border-radius: 50px
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        top: 20px
+        margin-bottom: 20px
+
+        &:hover
+          opacity: 1
+
+      .range::-webkit-slider-thumb
+        -webkit-appearance: none
+        appearance: none
+        width: 15px
+        height: 15px
+        background: $dark
+        cursor: pointer
+        border-radius: 50px
+        transition-duration: .3s
+        transition-delay: .1s
+
+        &:hover
+          border-radius: 50px
+          box-shadow: 0px 0px 0px 8px rgba(0,0,0,0.3)
+          transition-duration: .3s
+          transition-delay: .1s
+
+        &:focus
+          border-radius: 50px
+          box-shadow: 0px 0px 0px 8px rgba(0,0,0,0.3)
+          transition-duration: .3s
+          transition-delay: .1s
+
+        &:active
+          border-radius: 50px
+          box-shadow: 0px 0px 0px 8px rgba(0,0,0,0.3)
+          transition-duration: .3s
+          transition-delay: .1s
+
+      .range::-moz-range-thumb
+        width: 15px
+        height: 15px
+        background: $dark
+        cursor: pointer
+        border-radius: 50px
+
+      .currency
+        display: block
+        width: 80%
+        margin: auto
+        height: auto
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        position: relative
+        top: 20px
+        justify-content: space-around
+
+        span
+          width: 40%
+          height: auto
+          display: flex
+          flex-wrap: wrap
+          flex-flow: row
+          align-content: space-between
+          align-items: center
+
+          &.maxPrice
+            justify-content: flex-end
+
+        i
+          width: 10%
+          height: auto
+          display: flex
+          flex-wrap: wrap
+          flex-flow: row
+          align-content: space-between
+          align-items: center
+
+.products
+  width: calc(100% - 350px)
+  position: relative
+  height: auto
+  display: flex
+  padding: 50px 0px
+  text-align: center
+
+  .filterAction
+    display: none
+    flex-wrap: wrap
+    width: 100%
+    height: 50px
+    align-items: center
+    align-content: center
+    justify-content: space-around
+    position: relative
+    top: -50px
+    background: $dark
+
+    a
+      font-size: 1.2em
+      color: $neutral
+      text-transform: uppercase
+
+      span > i
+        position: relative
+        left: 10px
+
+  .paginate
+    display: flex
+    width: auto
+    height: auto
+    flex-wrap: wrap
+    align-content: flex-end
+    align-items: flex-end
+    flex-flow: row-reverse
+    position: relative
+    right: 20px
+    top: 50px
+
+    .paginator
+      width: 200px
+      height: auto
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      flex-flow: row
+      align-content: center
+      justify-content: space-around
+
+      .paginatorInfo
+        width: auto
+        height: auto
+        display: flex
+        flex-wrap: wrap
+        color: $grey
+
+      ul
+        display: flex
+        width: auto
+        height: auto
+        flex-wrap: wrap
+        align-content: flex-end
+        align-items: center
+        position: relative
+
+        & > li
+          list-style: none
+          display: inline-flex
+          padding: none
+          width: 30px
+          height: 30px
+          align-items: center
+          align-content: center
+          background: $dark
+
+        & > li > a
+          text-decoration: none
+          color: $neutral
+          font-size: 1.2em
+          position: relative
+          margin: auto
+
+.divider
+  width: 80%
+  height: 1px
+  background: rgba(0, 0, 0, 0.2)
+  position: relative
+  margin-top: 20px
+  margin-bottom: 20px
+
+
+.container
+  width: 100%
+  height: auto
+  display: flex
+  flex-wrap: wrap
+
+  .wrap
+    width: 90%
+    height: auto
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    flex-flow: row
+    align-items: center
+    align-content: center
+    margin: auto
+
+    p
+      position: relative
+      margin: auto
+
+.shoppingCart
+  width: 100%
+  height: auto
+  min-height: 100vh
+  display: none
+  background: $lightGrey
+  flex-wrap: wrap
+  position: absolute
+  user-select: none
+  top: 0
+  z-index: 10000
+
+  &.active
+    display: flex
+
+  .shoppingCartControls
+    width: 100%
+    height: 50px
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    align-content: center
+    background: $dark
+
+    span
+      width: calc(100% - 50px)
+      display: flex
+      align-content: center
+      align-items: center
+      justify-content: center
+      color: $neutral
+      text-transform: uppercase
+
+    a
+      width: 50px
+      height: 50px
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      align-content: center
+
+      i
+        font-size: 1.5em
+        color: $neutral
+
+  .shoppingCartItems
+    width: 100%
+    height: auto
+    padding: 50px 0px
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    align-content: center
+    position: absolute
+    top: 50px
+
+    .cartItems
+      width: 100%
+      height: auto
+      display: flex
+      align-items: center
+      align-content: center
+      position: relative
+
+      .itemProperty
+        width: 80%
+        height: 150px
+        display: flex
+        align-items: center
+        align-content: center
+        justify-content: space-around
+        position: relative
+        background: $white
+        margin: auto
+
+        .ImageIcon
+          width: 200px
+          height: 150px
+          display: flex
+          background: $grey
+
+        .removeItem
+            width: 50px
+            height: 150px
+            display: flex
+            align-items: center
+            align-content: center
+            font-size: 1.5em
+            color: $grey
+
+            &:hover
+              cursor: pointer
+
+        .itemInfo
+          width: calc(100% - 250px)
+          height: 150px
+          display: flex
+          flex-wrap: wrap
+          align-items: center
+          align-content: center
+          justify-content: space-around
+
+          .infoCart
+            padding: 0px 20px
+            overflow: hidden
+
+            .inputCart
+              width: 100px
+              height: 20px
+              display: flex
+
+              input
+                width: 60px
+                background: transparent
+                border: none
+                text-align: center
+                font-size: 1.2em
+                color: $grey
+
+                &:focus
+                  outline: none
+
+              button
+                width: 20px
+                height: 20px
+                background: transparent
+                color: $dark
+                border: none
+
+                &:focus
+                  outline: none
+
+                &:hover
+                  cursor: pointer
+
+    .shoppingCartInfo
+      width: 100%
+      height: auto
+      padding: 50px 0px
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      align-content: center
+      justify-content: center
+
+      .shoppingContainerItem
+        width: 100%
+        height: auto
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        align-content: center
+        justify-content: center
+
+        .cantProduct
+          font-size: 1.5em
+
+        button
+          padding: 20px 50px
+          color: $neutral
+          background: $dark
+          border: none
+          text-transform: uppercase
+
+          i
+            position: relative
+            left: 10px
+
+          &:focus
+            outline: none
+
+          &:hover
+            cursor: pointer
+
+        .price
+          line-height: 100px
+          font-size: 2em
+          color: $blue

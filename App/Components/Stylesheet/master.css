@@ -1,0 +1,881 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Nunito", sans-serif;
+  background: #F1F1F1;
+}
+body.active {
+  overflow-y: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:scope {
+  outline: none;
+}
+
+.large-menu {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  background: #BE4248;
+  align-content: space-around;
+  align-items: center;
+  user-select: none;
+}
+.large-menu .menu-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.large-menu .logotype {
+  width: 20%;
+  min-width: 100px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+}
+.large-menu .logotype .logoText {
+  width: auto;
+  height: auto;
+  font-size: 2.3em;
+  position: relative;
+  margin: auto;
+  color: #E7DACB;
+}
+.large-menu .searchBar {
+  width: calc(100% - 40%);
+  min-width: 100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.large-menu .searchBar .input-icon {
+  width: 80%;
+  min-width: 100px;
+  display: flex;
+  position: relative;
+  margin: auto;
+  background: #E7DACB;
+}
+.large-menu .searchBar .input-icon .search-icon {
+  width: 30px;
+  height: auto;
+  font-size: 1.5em;
+  color: #586473;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  padding-left: 10px;
+}
+.large-menu .searchBar .input-icon .input-large {
+  width: calc(100% - 40px);
+  min-width: 200px;
+  padding: 10px 10px;
+  border: none;
+  background: transparent;
+  font-size: 1.5em;
+}
+.large-menu .menuitems {
+  width: 20%;
+  min-width: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+.large-menu .menuitems .shopping-bag {
+  display: flex;
+  flex-wrap: wrap;
+  letter-spacing: 5px;
+}
+.large-menu .menuitems .shopping-bag i {
+  font-size: 1.5em;
+  color: #E7DACB;
+}
+.large-menu .menuitems .shopping-bag .quantity {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  background: #586473;
+}
+.large-menu .menuitems .shopping-bag .quantity p {
+  width: auto;
+  height: auto;
+  position: relative;
+  margin: auto;
+  color: #E7DACB;
+  font-size: 1.2em;
+  text-align: right;
+  overflow: hidden;
+}
+.large-menu .menuitems .sesion {
+  font-size: 1em;
+  color: #E7DACB;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+.w-100 {
+  font-weight: 100;
+}
+
+.w-200 {
+  font-weight: 200;
+}
+
+.w-300 {
+  font-weight: 300;
+}
+
+.w-400 {
+  font-weight: 400;
+}
+
+.w-500 {
+  font-weight: 500;
+}
+
+.w-600 {
+  font-weight: 600;
+}
+
+.w-bold {
+  font-weight: bold;
+}
+
+.w-bolder {
+  font-weight: bolder;
+}
+
+.w-lighter {
+  font-weight: lighter;
+}
+
+.emphasis {
+  color: #21374B;
+}
+
+.rounded {
+  border-radius: 50%;
+}
+
+.round {
+  border-radius: 50px;
+}
+
+.column {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-flow: column;
+  user-select: none;
+}
+
+.filter {
+  width: 350px;
+  padding-top: 50px;
+  min-width: 250px;
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  padding-bottom: 100px;
+}
+.filter .filterControlls {
+  width: 100%;
+  height: 50px;
+  background: #21374B;
+  display: none;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  top: -50px;
+}
+.filter .filterControlls a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  color: #E7DACB;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.filter .filterControlls a i {
+  font-size: 1.5em;
+}
+.filter .filterControlls span {
+  text-transform: uppercase;
+  width: calc(100% - 50px);
+  display: flex;
+  flex-wrap: wrap;
+  color: #E7DACB;
+  justify-content: center;
+}
+.filter .contentOptions {
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+}
+.filter .contentOptions .OptionHead {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+}
+.filter .contentOptions .OptionHead span {
+  width: calc(100% - 40px);
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  position: relative;
+  left: 20px;
+}
+.filter .contentOptions .OptionHead i {
+  width: 20px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  align-content: center;
+  align-items: center;
+}
+.filter .contentOptions button.dark {
+  background: #586473;
+  color: #E7DACB;
+  position: relative;
+}
+.filter .contentOptions button.btn {
+  width: 80%;
+  height: auto;
+  padding: 10px 0px;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  margin: auto;
+  border: none;
+  top: 50px;
+  text-align: center;
+}
+.filter .contentOptions button.btn span {
+  position: relative;
+  margin: auto;
+}
+.filter .contentOptions button.btn:hover {
+  cursor: pointer;
+}
+.filter .contentOptions button.btn:focus {
+  outline: none;
+}
+.filter .contentOptions button.btn::after {
+  color: #E7DACB;
+  font-size: 1.5em;
+}
+.filter .contentOptions .filterItems {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.filter .contentOptions .filterItems .range {
+  width: 80%;
+  height: 5px;
+  position: relative;
+  margin: auto;
+  -webkit-appearance: none;
+  background: #586473;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  border-radius: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  top: 20px;
+  margin-bottom: 20px;
+}
+.filter .contentOptions .filterItems .range:hover {
+  opacity: 1;
+}
+.filter .contentOptions .filterItems .range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #21374B;
+  cursor: pointer;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  transition-delay: 0.1s;
+}
+.filter .contentOptions .filterItems .range::-webkit-slider-thumb:hover {
+  border-radius: 50px;
+  box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.3);
+  transition-duration: 0.3s;
+  transition-delay: 0.1s;
+}
+.filter .contentOptions .filterItems .range::-webkit-slider-thumb:focus {
+  border-radius: 50px;
+  box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.3);
+  transition-duration: 0.3s;
+  transition-delay: 0.1s;
+}
+.filter .contentOptions .filterItems .range::-webkit-slider-thumb:active {
+  border-radius: 50px;
+  box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.3);
+  transition-duration: 0.3s;
+  transition-delay: 0.1s;
+}
+.filter .contentOptions .filterItems .range::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background: #21374B;
+  cursor: pointer;
+  border-radius: 50px;
+}
+.filter .contentOptions .filterItems .currency {
+  display: block;
+  width: 80%;
+  margin: auto;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  top: 20px;
+  justify-content: space-around;
+}
+.filter .contentOptions .filterItems .currency span {
+  width: 40%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row;
+  align-content: space-between;
+  align-items: center;
+}
+.filter .contentOptions .filterItems .currency span.maxPrice {
+  justify-content: flex-end;
+}
+.filter .contentOptions .filterItems .currency i {
+  width: 10%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row;
+  align-content: space-between;
+  align-items: center;
+}
+
+.products {
+  width: calc(100% - 350px);
+  position: relative;
+  height: auto;
+  display: flex;
+  padding: 50px 0px;
+  text-align: center;
+}
+.products .filterAction {
+  display: none;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+  position: relative;
+  top: -50px;
+  background: #21374B;
+}
+.products .filterAction a {
+  font-size: 1.2em;
+  color: #E7DACB;
+  text-transform: uppercase;
+}
+.products .filterAction a span > i {
+  position: relative;
+  left: 10px;
+}
+.products .paginate {
+  display: flex;
+  width: auto;
+  height: auto;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  align-items: flex-end;
+  flex-flow: row-reverse;
+  position: relative;
+  right: 20px;
+  top: 50px;
+}
+.products .paginate .paginator {
+  width: 200px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-flow: row;
+  align-content: center;
+  justify-content: space-around;
+}
+.products .paginate .paginator .paginatorInfo {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  color: #586473;
+}
+.products .paginate .paginator ul {
+  display: flex;
+  width: auto;
+  height: auto;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+.products .paginate .paginator ul > li {
+  list-style: none;
+  display: inline-flex;
+  padding: none;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  align-content: center;
+  background: #21374B;
+}
+.products .paginate .paginator ul > li > a {
+  text-decoration: none;
+  color: #E7DACB;
+  font-size: 1.2em;
+  position: relative;
+  margin: auto;
+}
+
+.divider {
+  width: 80%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .wrap {
+  width: 90%;
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row;
+  align-items: center;
+  align-content: center;
+  margin: auto;
+}
+.container .wrap p {
+  position: relative;
+  margin: auto;
+}
+
+.shoppingCart {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  display: none;
+  background: #F1F1F1;
+  flex-wrap: wrap;
+  position: absolute;
+  user-select: none;
+  top: 0;
+  z-index: 10000;
+}
+.shoppingCart.active {
+  display: flex;
+}
+.shoppingCart .shoppingCartControls {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  background: #21374B;
+}
+.shoppingCart .shoppingCartControls span {
+  width: calc(100% - 50px);
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  color: #E7DACB;
+  text-transform: uppercase;
+}
+.shoppingCart .shoppingCartControls a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+}
+.shoppingCart .shoppingCartControls a i {
+  font-size: 1.5em;
+  color: #E7DACB;
+}
+.shoppingCart .shoppingCartItems {
+  width: 100%;
+  height: auto;
+  padding: 50px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  position: absolute;
+  top: 50px;
+}
+.shoppingCart .shoppingCartItems .cartItems {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  position: relative;
+}
+.shoppingCart .shoppingCartItems .cartItems .itemProperty {
+  width: 80%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+  position: relative;
+  background: #FFFFFF;
+  margin: auto;
+}
+.shoppingCart .shoppingCartItems .cartItems .itemProperty .ImageIcon {
+  width: 200px;
+  height: 150px;
+  display: flex;
+  background: #586473;
+}
+.shoppingCart .shoppingCartItems .cartItems .itemProperty .removeItem {
+  width: 50px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  font-size: 1.5em;
+  color: #586473;
+}
+.shoppingCart .shoppingCartItems .cartItems .itemProperty .removeItem:hover {
+  cursor: pointer;
+}
+.shoppingCart .shoppingCartItems .cartItems .itemProperty .itemInfo {
+  width: calc(100% - 250px);
+  height: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+}
+.shoppingCart .shoppingCartItems .cartItems .itemProperty .itemInfo .infoCart {
+  padding: 0px 20px;
+  overflow: hidden;
+}
+.shoppingCart .shoppingCartItems .cartItems .itemProperty .itemInfo .infoCart .inputCart {
+  width: 100px;
+  height: 20px;
+  display: flex;
+}
+.shoppingCart .shoppingCartItems .cartItems .itemProperty .itemInfo .infoCart .inputCart input {
+  width: 60px;
+  background: transparent;
+  border: none;
+  text-align: center;
+  font-size: 1.2em;
+  color: #586473;
+}
+.shoppingCart .shoppingCartItems .cartItems .itemProperty .itemInfo .infoCart .inputCart input:focus {
+  outline: none;
+}
+.shoppingCart .shoppingCartItems .cartItems .itemProperty .itemInfo .infoCart .inputCart button {
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  color: #21374B;
+  border: none;
+}
+.shoppingCart .shoppingCartItems .cartItems .itemProperty .itemInfo .infoCart .inputCart button:focus {
+  outline: none;
+}
+.shoppingCart .shoppingCartItems .cartItems .itemProperty .itemInfo .infoCart .inputCart button:hover {
+  cursor: pointer;
+}
+.shoppingCart .shoppingCartItems .shoppingCartInfo {
+  width: 100%;
+  height: auto;
+  padding: 50px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.shoppingCart .shoppingCartItems .shoppingCartInfo .shoppingContainerItem {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.shoppingCart .shoppingCartItems .shoppingCartInfo .shoppingContainerItem .cantProduct {
+  font-size: 1.5em;
+}
+.shoppingCart .shoppingCartItems .shoppingCartInfo .shoppingContainerItem button {
+  padding: 20px 50px;
+  color: #E7DACB;
+  background: #21374B;
+  border: none;
+  text-transform: uppercase;
+}
+.shoppingCart .shoppingCartItems .shoppingCartInfo .shoppingContainerItem button i {
+  position: relative;
+  left: 10px;
+}
+.shoppingCart .shoppingCartItems .shoppingCartInfo .shoppingContainerItem button:focus {
+  outline: none;
+}
+.shoppingCart .shoppingCartItems .shoppingCartInfo .shoppingContainerItem button:hover {
+  cursor: pointer;
+}
+.shoppingCart .shoppingCartItems .shoppingCartInfo .shoppingContainerItem .price {
+  line-height: 100px;
+  font-size: 2em;
+  color: #4A89AA;
+}
+
+@media screen and (max-width: 900px) {
+  .large-menu {
+    display: none;
+  }
+
+  .mobileMenu {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    background: #BE4248;
+  }
+  .mobileMenu .openSearch {
+    width: 50px;
+    height: 80px;
+    background: #BE4248;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    z-index: 15;
+  }
+  .mobileMenu .openSearch i {
+    color: #E7DACB;
+    font-size: 1.5em;
+    position: relative;
+    margin: auto;
+  }
+  .mobileMenu .searchBar {
+    width: calc(100% - 50px);
+    height: 80px;
+    background: #BE4248;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    position: absolute;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.7s ease 0s;
+    z-index: 10;
+    left: 50px;
+  }
+  .mobileMenu .searchBar input {
+    width: calc(100% - 50px);
+    border: none;
+    padding: 10px 0px;
+    background: transparent;
+    border-bottom: 1.5px solid #E7DACB;
+    color: #E7DACB;
+    font-size: 100%;
+  }
+  .mobileMenu .searchBar input::placeholder {
+    color: #E7DACB;
+  }
+  .mobileMenu .searchBar .closeSearch {
+    width: 50px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    position: relative;
+  }
+  .mobileMenu .searchBar .closeSearch i {
+    color: #E7DACB;
+    font-size: 1.5em;
+    position: relative;
+    margin: auto;
+  }
+  .mobileMenu .active {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: all 0.7s ease 0s;
+  }
+  .mobileMenu .menuitems {
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    position: absolute;
+    right: 0;
+  }
+  .mobileMenu .menuitems .shopping-bag {
+    display: flex;
+    flex-wrap: wrap;
+    letter-spacing: 5px;
+  }
+  .mobileMenu .menuitems .shopping-bag i {
+    font-size: 1.5em;
+    color: #E7DACB;
+  }
+  .mobileMenu .menuitems .shopping-bag .quantity {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    background: #586473;
+  }
+  .mobileMenu .menuitems .shopping-bag .quantity p {
+    width: auto;
+    height: auto;
+    position: relative;
+    margin: auto;
+    color: #E7DACB;
+    font-size: 1.2em;
+    text-align: right;
+    overflow: hidden;
+  }
+  .mobileMenu .menuitems .sesion {
+    font-size: 1em;
+    color: #E7DACB;
+  }
+
+  .filter {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: 1000;
+    background: #F1F1F1;
+    display: none;
+    padding-top: 50px;
+  }
+  .filter::before {
+    opacity: 0;
+  }
+  .filter.active {
+    display: flex;
+    opacity: 1;
+  }
+  .filter .filterControlls {
+    display: flex;
+  }
+
+  .products {
+    width: 100%;
+  }
+  .products .filterAction {
+    display: flex;
+  }
+
+  .shoppingCart .shoppingCartItems .cartItems .itemProperty {
+    width: 60%;
+    min-width: 200px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .shoppingCart .shoppingCartItems .cartItems .itemProperty .ImageIcon {
+    width: 100%;
+    min-width: 200px;
+    height: auto;
+    min-height: 200px;
+    display: block;
+    flex-wrap: wrap;
+  }
+  .shoppingCart .shoppingCartItems .cartItems .itemProperty .removeItem {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+  .shoppingCart .shoppingCartItems .cartItems .itemProperty .itemInfo {
+    width: 100%;
+    height: auto;
+  }
+  .shoppingCart .shoppingCartItems .cartItems .itemProperty .itemInfo .infoCart {
+    line-height: 50px;
+  }
+}
+
+/*# sourceMappingURL=master.css.map */

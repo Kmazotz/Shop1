@@ -1,0 +1,181 @@
+$neutral: #E7DACB
+$dark: #21374B
+$red: #BE4248
+$grey: #586473
+$blue: #4A89AA
+$lightGrey: #F1F1F1
+
+@media screen and (max-width: 900px)
+  .large-menu
+    display: none
+
+  .mobileMenu
+    display: flex
+    width: 100%
+    height: 80px
+    flex-wrap: wrap
+    align-items: center
+    align-content: center
+    background: $red
+
+    .openSearch
+      width: 50px
+      height: 80px
+      background: $red
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      align-content: center
+      position: relative
+      z-index: 15
+
+      i
+        color: $neutral
+        font-size: 1.5em
+        position: relative
+        margin: auto
+
+    .searchBar
+      width: calc(100% - 50px)
+      height: 80px
+      background: $red
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      align-content: center
+      position: absolute
+      opacity: 0
+      transform: translateX(-100%)
+      transition: all 0.7s ease 0s
+      z-index: 10
+      left: 50px
+
+      input
+        width: calc(100% - 50px)
+        border: none
+        padding: 10px 0px
+        background: transparent
+        border-bottom: 1.5px solid $neutral
+        color: $neutral
+        font-size: 100%
+
+      input::placeholder
+        color: $neutral
+
+      .closeSearch
+        width: 50px
+        height: auto
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        align-content: center
+        position: relative
+
+        i
+          color: $neutral
+          font-size: 1.5em
+          position: relative
+          margin: auto
+
+    .active
+      opacity: 1
+      transform: translateX(0px)
+      transition: all 0.7s ease 0s
+
+    .menuitems
+      width: 200px
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      justify-content: space-around
+      flex-flow: row wrap
+      position: absolute
+      right: 0
+
+      .shopping-bag
+        display: flex
+        flex-wrap: wrap
+        letter-spacing: 5px
+
+        i
+          font-size: 1.5em
+          color: $neutral
+
+        .quantity
+          width: 25px
+          height: 25px
+          display: flex
+          align-content: center
+          align-items: center
+          background: $grey
+
+          p
+            width: auto
+            height: auto
+            position: relative
+            margin: auto
+            color: $neutral
+            font-size: 1.2em
+            text-align: right
+            overflow: hidden
+
+      .sesion
+        font-size: 1em
+        color: $neutral
+
+  .filter
+    width: 100%
+    height: auto
+    position: absolute
+    z-index: 1000
+    background: $lightGrey
+    display: none
+    padding-top: 50px
+
+    &::before
+      opacity: 0
+
+    &.active
+      display: flex
+      opacity: 1
+
+    .filterControlls
+      display: flex
+
+  .products
+    width: 100%
+
+    .filterAction
+      display: flex
+
+  .shoppingCart .shoppingCartItems .cartItems .itemProperty
+    width: 60%
+    min-width: 200px
+    height: auto
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+    .ImageIcon
+      width: 100%
+      min-width: 200px
+      height: auto
+      min-height: 200px
+      display: block
+      flex-wrap: wrap
+
+    .removeItem
+      display: flex
+      width: 100%
+      height: 100px
+      flex-wrap: wrap
+      align-items: center
+      align-content: center
+      justify-content: center
+
+    .itemInfo
+      width: 100%
+      height: auto
+
+      .infoCart
+        line-height: 50px
