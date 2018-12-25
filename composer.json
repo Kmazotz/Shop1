@@ -1,5 +1,8 @@
 {
     "require-dev": {
         "symfony/web-server-bundle": "^4.2"
+    },
+    "require": {
+        "catfan/medoo": "^1.6"
     }
 }
