@@ -7,7 +7,7 @@
     *
     * ArrayCollection description.
     *
-    * @version 0.01
+    * @version 0.1
     * @author Brayan Alexis Angulo R
     */
 
