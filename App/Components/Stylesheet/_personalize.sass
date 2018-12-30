@@ -45,6 +45,16 @@ $white: #FFFFFF
     display: flex
     flex-wrap: wrap
 
+    button
+      border: none
+      background: transparent
+
+      &:focus
+        outline: none
+      
+      &:hover
+        cursor: pointer
+
     .input-icon
       width: 80%
       min-width: 100px
@@ -477,9 +487,97 @@ $white: #FFFFFF
     align-content: center
     margin: auto
 
-    p
+    .itemPage
+      width: 100%
+      height: auto
       position: relative
       margin: auto
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      align-content: center
+      justify-content: space-around
+      flex-direction: row
+
+      .purchasable
+        width: 30%
+        min-width: 200px
+        height: auto
+        padding: 20px 0px
+        background: $white
+        display: flex
+        flex-wrap: wrap
+        line-height: 17px
+        margin: 10px auto
+
+        .contentPurchasable
+          width: 100%
+          height: auto
+          display: flex
+          align-content: center
+          align-items: center
+          flex-wrap: wrap
+          justify-content: center
+          margin: auto
+
+          .imgPurchasable
+            width: 100%
+            height: auto
+            min-height: 200px
+            background: $grey
+
+          .infoPurchasable
+            width: 100%
+            height: auto
+            display: flex
+            flex-wrap: wrap
+            flex-direction: column
+            align-items: center
+            align-content: center 
+
+            .infoContent
+              width: 100%
+              height: auto
+              display: block
+              flex-direction: row
+              justify-content: center
+              align-content: center
+              align-items: center
+              line-height: 20px
+              margin: 10px auto
+
+              &.title
+                font-size: 1.2em
+                text-transform: uppercase
+
+              &.price
+                font-size: 1em
+
+        .actionPurchasable
+          width: 100%
+          height: auto
+          display: flex
+          flex-wrap: wrap
+          justify-content: flex-end
+
+          button
+            width: auto
+            height: auto
+            display: flex
+            background: transparent
+            border: none
+            position: relative
+            right: 10px
+
+            &:focus
+              outline: none
+            
+            &:hover
+              cursor: pointer
+
+            i
+              font-size: 2em
+              color: $grey
 
 .shoppingCart
   width: 100%
@@ -492,6 +590,8 @@ $white: #FFFFFF
   user-select: none
   top: 0
   z-index: 10000
+  overflow: scroll
+  overflow-x: hidden
 
   &.active
     display: flex
@@ -544,6 +644,12 @@ $white: #FFFFFF
       align-items: center
       align-content: center
       position: relative
+      flex-direction: column
+
+      .item
+        width: 100%
+        height: auto
+        position: relative
 
       .itemProperty
         width: 80%
@@ -554,7 +660,8 @@ $white: #FFFFFF
         justify-content: space-around
         position: relative
         background: $white
-        margin: auto
+        line-height: 75px
+        margin: 10px auto
 
         .ImageIcon
           width: 200px

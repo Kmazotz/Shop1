@@ -65,6 +65,16 @@ input:scope {
   display: flex;
   flex-wrap: wrap;
 }
+.large-menu .searchBar button {
+  border: none;
+  background: transparent;
+}
+.large-menu .searchBar button:focus {
+  outline: none;
+}
+.large-menu .searchBar button:hover {
+  cursor: pointer;
+}
 .large-menu .searchBar .input-icon {
   width: 80%;
   min-width: 100px;
@@ -512,9 +522,97 @@ input:scope {
   align-content: center;
   margin: auto;
 }
-.container .wrap p {
+.container .wrap .itemPage {
+  width: 100%;
+  height: auto;
   position: relative;
   margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.container .wrap .itemPage .purchasable {
+  width: 30%;
+  min-width: 200px;
+  height: auto;
+  padding: 20px 0px;
+  background: #FFFFFF;
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 17px;
+  margin: 10px auto;
+}
+.container .wrap .itemPage .purchasable .contentPurchasable {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+.container .wrap .itemPage .purchasable .contentPurchasable .imgPurchasable {
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+  background: #586473;
+}
+.container .wrap .itemPage .purchasable .contentPurchasable .infoPurchasable {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+.container .wrap .itemPage .purchasable .contentPurchasable .infoPurchasable .infoContent {
+  width: 100%;
+  height: auto;
+  display: block;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  line-height: 20px;
+  margin: 10px auto;
+}
+.container .wrap .itemPage .purchasable .contentPurchasable .infoPurchasable .infoContent.title {
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+.container .wrap .itemPage .purchasable .contentPurchasable .infoPurchasable .infoContent.price {
+  font-size: 1em;
+}
+.container .wrap .itemPage .purchasable .actionPurchasable {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.container .wrap .itemPage .purchasable .actionPurchasable button {
+  width: auto;
+  height: auto;
+  display: flex;
+  background: transparent;
+  border: none;
+  position: relative;
+  right: 10px;
+}
+.container .wrap .itemPage .purchasable .actionPurchasable button:focus {
+  outline: none;
+}
+.container .wrap .itemPage .purchasable .actionPurchasable button:hover {
+  cursor: pointer;
+}
+.container .wrap .itemPage .purchasable .actionPurchasable button i {
+  font-size: 2em;
+  color: #586473;
 }
 
 .shoppingCart {
@@ -528,6 +626,8 @@ input:scope {
   user-select: none;
   top: 0;
   z-index: 10000;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 .shoppingCart.active {
   display: flex;
@@ -580,6 +680,12 @@ input:scope {
   align-items: center;
   align-content: center;
   position: relative;
+  flex-direction: column;
+}
+.shoppingCart .shoppingCartItems .cartItems .item {
+  width: 100%;
+  height: auto;
+  position: relative;
 }
 .shoppingCart .shoppingCartItems .cartItems .itemProperty {
   width: 80%;
@@ -590,7 +696,8 @@ input:scope {
   justify-content: space-around;
   position: relative;
   background: #FFFFFF;
-  margin: auto;
+  line-height: 75px;
+  margin: 10px auto;
 }
 .shoppingCart .shoppingCartItems .cartItems .itemProperty .ImageIcon {
   width: 200px;

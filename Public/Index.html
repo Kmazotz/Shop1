@@ -21,14 +21,14 @@
       </div>
 
       <div class="searchBar">
-        <div class="input-icon">
-          <span class="search-icon"><i class="fas fa-search"></i></span>
+        <div class="input-icon">            
           <input type="text" id="Search" class="input-large w-bold" placeholder="¿Que deseas buscar?" maxlength="45">
+          <button id="Search"><span class="search-icon"><i class="fas fa-search"></i></span></button>
         </div>
       </div>
 
       <div class="menuitems">
-        <a href="#!" id="openCart"><span class="shopping-bag"><i class="fas fa-shopping-bag"></i><span class="quantity rounded"><p class="w-bold">0</p></span></span></a>
+        <a href="#!" id="openCart"><span class="shopping-bag"><i class="fas fa-shopping-bag"></i><span class="quantity rounded"><p class="w-bold" id="shoppingCuantity"></p></span></span></a>
         <a href="#!" class="sesion w-bolder">Sign In</a>
         <a href="#!" class="sesion w-bolder">Log In</a>
       </div>
@@ -50,7 +50,7 @@
     </div>
 
     <div class="menuitems">
-      <a href="#!" id="openCart"><span class="shopping-bag"><i class="fas fa-shopping-bag"></i><span class="quantity rounded"><p class="w-bold">0</p></span></span></a>
+      <a href="#!" id="openCart"><span class="shopping-bag"><i class="fas fa-shopping-bag"></i><span class="quantity rounded"><p class="w-bold" id="shoppingCuantity"></p></span></span></a>
       <a href="#!" class="sesion w-bolder">Sign In</a>
       <a href="#!" class="sesion w-bolder">Log In</a>
     </div>
@@ -271,7 +271,7 @@
         <div id="itemPage" class="itemPage">
 
           <!--ShowProducts-->
-
+          
         </div>
 
       </div>
@@ -296,29 +296,7 @@
     <div class="shoppingCartItems">
       <div class="cartItems">
           <!--ItemDemo-->
-          <div class="itemProperty">
-            <div class="ImageIcon">
-
-            </div>
-            <div class="itemInfo">
-                <div class="infoCart">
-                  <span id="productName">Lorem Ipsum</span>
-                </div>
-                <div class="infoCart">
-                  <div class="inputCart">
-                    <button type="button" id="subtractCant"><i class="fas fa-minus"></i></button>
-                    <input type="text" id="itemCant" class="w-bold" maxlength="3" value="0"/>
-                    <button type="button" id="addCant"><i class="fas fa-plus"></i></button>
-                  </div>
-                </div>
-                <div class="infoCart">
-                  <span id="productPrice">$100,000</span>
-                </div>
-            </div>
-            <div class="removeItem">
-              <i class="fas fa-trash-alt"></i>
-            </div>
-          </div>
+          
           <!--ItemDemo-->
       </div>
       <div class="shoppingCartInfo">
@@ -340,5 +318,6 @@
 <script src="../App/Components/Script/Dinero/dinero.js" charset="utf-8"></script>
 <script src="../App/Components/Script/Material/material-components-web.min.js" charset="utf-8"></script>
 <script src="../App/Controllers/Main/main.js" charset="utf-8"></script>
+<script src="../App/Controllers/Main/ShoppingCart.js" charset="utf-8"></script>
 </body>
 </html>
