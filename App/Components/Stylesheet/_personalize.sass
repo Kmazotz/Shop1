@@ -106,16 +106,21 @@ $white: #FFFFFF
         display: flex
         align-content: center
         align-items: center
+        justify-content: center
         background: $grey
 
         p
           width: auto
           height: auto
           position: relative
-          margin: auto
+          display: flex
+          flex-wrap: wrap
+          align-items: center
+          align-content: center
+          flex-direction: row
+          justify-content: center
           color: $neutral
           font-size: 1.2em
-          text-align: right
           overflow: hidden
 
     .sesion
@@ -766,3 +771,178 @@ $white: #FFFFFF
           line-height: 100px
           font-size: 2em
           color: $blue
+
+footer
+  width: 100%
+  height: auto
+  display: flex
+  flex-wrap: wrap
+  flex-direction: row
+  align-items: center
+  align-content: center
+  position: relative
+  top: 100px
+  text-transform: uppercase
+
+  .suscribe
+    width: 100%
+    height: auto
+    padding: 50px 0px
+    background: $red
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    user-select: none
+
+    .item
+      width: 35%
+      height: auto
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      align-content: center
+      justify-content: center
+
+      .flag
+        width: 20px
+        height: 100px
+        padding: 0px 20px
+
+      p
+        margin: auto
+        font-size: 1.4em
+      
+      .inputSuscribe
+        width: 70%
+        height: 50px
+        background: $white
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        align-content: center
+        justify-content: center
+
+        button
+          width: 50px
+          height: 50px
+          background: $dark
+          display: flex
+          flex-wrap: wrap
+          align-items: center
+          align-content: center
+          justify-content: center
+          border: none
+
+          &:focus
+            outline: none
+          
+          &:hover
+            cursor: pointer
+
+          &:hover > i
+
+            color: $neutral
+            transition-duration: .3s
+            font-size: 1.3em
+
+          i
+            color: $white
+            transition-duration: .3s
+
+        input
+          width: calc(100% - 90px)
+          background: transparent
+          border: none
+          text-transform: uppercase
+          padding: 0px 20px
+
+          &:focus
+            outline: none
+  
+  .footTop
+    background: $white
+    width: 100%
+    height: auto
+    line-height: 20px
+    display: flex
+    flex-wrap: wrap
+    user-select: none
+
+    .content
+      width: 70%
+      height: auto
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      align-content: center
+      justify-content: space-around
+      padding: 50px 0px
+      position: relative
+      margin: auto
+
+      ul
+        width: 17%
+        height: auto
+        list-style: none
+        line-height: 15px
+        display: flex
+        flex-direction: column
+
+        li
+          width: 80%
+          height: auto
+          line-height: 20px
+          position: relative
+          margin: auto
+
+          h5
+            font-size: 1.2em
+            padding: 20px 0px
+            color: $dark
+          
+          a
+            text-transform: none
+            padding: 20px 0px
+            color: $grey
+
+  .footBottom
+    width: 100%
+    height: 70px
+    background: $dark
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    align-content: center
+    justify-content: center
+    color: $neutral
+    user-select: none
+    font-size: .7em
+
+    .item
+      width: 35%
+      height: auto
+      display: flex
+      align-items: center
+      align-content: center
+
+      &.copy
+        justify-content: flex-end
+
+      p
+        width: auto
+        height: auto
+        position: relative
+        display: flex
+        flex-direction: row
+
+        .pd-1
+          padding: 0px 10px
+
+        .pd-0
+          padding: 0px 4.5px
+        
+        a
+          color: $neutral
+
+
+

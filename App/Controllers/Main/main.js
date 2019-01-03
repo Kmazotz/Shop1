@@ -15,7 +15,24 @@ $( document ).ready(function(){
     category : "All",
     colection : "All",
     price : Dinero({ amount: 10000000 }).toFormat( '$0,0' )
-  }    
+  }
+
+  var location = '';
+  
+  var countries = [
+
+        {
+            'id' : 0,
+            'name' : 'Colombia',
+            'picture' : 'Colombia'
+        },
+        {
+            'id' : 1,
+            'name' : 'Brazil',
+            'picture' : 'Brazil'
+        }
+        
+  ];
 
   var purchasableObj = [], cartObject = [];
 
@@ -74,6 +91,50 @@ $( document ).ready(function(){
 
     });
 
+    function getCountry( status ){
+
+        var path = '/App/Components/Pictures/Flags/';
+
+        $.get("https://api.ipdata.co?api-key=test", function (response) {
+
+            if ( status === true ) {
+
+                location = '';               
+
+                location = JSON.stringify(response.country_name, null, 4);
+
+            }
+
+            for (let i = 0; i < countries.length; i++) {           
+
+                if ( countries[i].name === location.replace(/['"]+/g, '') ) {
+                    
+                    $( 'span#CountryName' ).text( countries[i].name );
+
+                    $( 'div.flag' ).append( '<img src="'+ path + countries[i].name + '.png" alt="'+ countries[i].name +'" width = "" >' );           
+                    
+                    $( 'div.flag' ).each(function(){
+                        
+                       var children = $( this ).children();
+
+                       var childrenObj = children;
+
+                       childrenObj[0].width = 15;
+                       
+                       childrenObj[0].style.padding = "0px 10px";
+                       
+                    });
+                }
+                
+            }
+            
+
+        }, "jsonp");
+
+    }
+
+    getCountry( true );
+
       $( 'input[type="checkbox"]' ).on('change', function() {
         $( 'input[name="' + this.name + '"]' ).not( this ).prop( 'checked', false );
         switch ( this.name ) {
@@ -99,10 +160,12 @@ $( document ).ready(function(){
 
       $( 'a#OpenFilter' ).click(function(){
         $( 'div#filterOptions' ).addClass( 'active' );
+        $( 'body' ).addClass( 'active' );
       });
 
       $( 'a#closeFilter' ).click(function(){
         $( 'div#filterOptions' ).removeClass( 'active' );
+        $( 'body' ).removeClass( 'active' );
       });
 
       $( 'a#openCart' ).click(function(){
@@ -361,6 +424,46 @@ $( document ).ready(function(){
 
       }
 
+      function calcTotalPay( obj, status ){
+            
+            var totalToPay = 0;
+            
+            if ( obj.length > 0 ) {
+
+                switch (status) {
+                    case true:
+                        
+                        for (let i = 0; i < obj.length; i++) {
+                        
+                            totalToPay+= convertToDineroFormat(obj[i].total);
+                        }
+
+                        $( 'span#cantProduct' ).text( obj.length );
+                        $( 'p#shoppingCuantity' ).text( obj.length );
+                        $( 'span#totalPrice' ).text( Dinero({ amount: totalToPay }).toFormat( '$0,0' ) );
+    
+                        break;
+                
+                    default:
+    
+                    calcTotalPay(cartObject, true);
+    
+                    break;
+                }
+
+            }else{
+
+                x = 0;
+
+                $( 'span#cantProduct' ).text( obj.length );
+                $( 'p#shoppingCuantity' ).text( obj.length );
+                $( 'span#totalPrice' ).text( Dinero({ amount: totalToPay }).toFormat( '$0,0' ) );
+
+            }
+            
+
+    }
+
       
       function createElements( obj, notShow ){
 
@@ -369,7 +472,8 @@ $( document ).ready(function(){
             $( 'div.cartItems' ).text( '' );
 
             for ( var i = 0; i < obj.length; i++ ) {
-
+                obj[i].total = 0;
+                obj[i].total = obj[i].unitPrice * obj[i].cant;
         
                 $( 'div.cartItems' ).each( function(){
             
@@ -393,7 +497,7 @@ $( document ).ready(function(){
                                     '</div>'+
                                 '</div>'+
                                 '<div class="infoCart">'+
-                                    '<span id="productPrice">'+ Dinero({ amount: convertToDineroFormat( obj[i].unitPrice ) }).multiply( obj[i].cant ).toFormat( '$0,0' ) +'</span>'+
+                                    '<span id="productPrice">'+ Dinero({ amount: convertToDineroFormat( obj[i].total ) }).toFormat( '$0,0' ) +'</span>'+
                                 '</div>'+
                             '</div>'+
                             '<div class="removeItem">'+
@@ -404,7 +508,7 @@ $( document ).ready(function(){
                 
                     );
                 
-                    calcTotalPay();
+                    calcTotalPay( cartObject, true );
                 });               
                 
             }               
@@ -415,46 +519,7 @@ $( document ).ready(function(){
 
         }
 
-        function calcTotalPay(){
-
-            $( 'span#cantProduct' ).each(function(){
-
-                var getParent = $( this ).parent();
-    
-                $( getParent ).each(function(){
-                    
-                    var offsetParent = $( this ).parent();
-    
-                    $( offsetParent ).each(function(){
-    
-                        var parentNode = $( this ).parent().get(0).previousElementSibling;
-    
-                        var getChildren = parentNode;
-    
-                        var childCollection = getChildren.children;// Show Colection Items.                
-    
-                        totalToPay = 0;
-    
-                        $( 'span#cantProduct' ).text( childCollection.length );
-                        $( 'p#shoppingCuantity' ).text( childCollection.length );
-    
-                        for (var i = 0; i < childCollection.length; i++) {
-                                
-                            totalToPay+= convertToDineroFormat( obj[i].total );
-    
-                        }
-    
-                        $( 'span#totalPrice' ).text( Dinero({ amount: totalToPay }).toFormat( '$0,0' ) );
-                        
-                    });
-                    
-                });           
-                
-            });
-
-        }
-
-        calcTotalPay();
+        calcTotalPay( cartObject, false );
 
         $( 'button#addCant' ).click(function(){
     
