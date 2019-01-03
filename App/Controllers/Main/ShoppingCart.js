@@ -1,9 +1,10 @@
 $( document ).ready(function(){
 
+
     //Vars
         
         var cartObject = [];
-        
+
     //EndRegion
 
     //Functions
@@ -42,7 +43,7 @@ $( document ).ready(function(){
 
             if ( notShow === false ) {
 
-                for ( var i = 0; i < obj.length; i++ ) {
+                for ( let i of obj ) {
 
             
                     $( 'div.cartItems' ).each( function(){
@@ -80,6 +81,7 @@ $( document ).ready(function(){
                     
                     });  
                     
+                    i+= 1;
                 }               
 
             } else {
@@ -140,7 +142,7 @@ $( document ).ready(function(){
             
                 $( currentValue ).each(function(){
             
-                    if( $( this ).val() <= maxValue - 1  && $( this ).val() > 0)
+                    if( $( this ).val() <= maxValue - 1  && $( this ).val() > 0 )
                     {
             
                     var newVal = (parseInt( currentValue.value ) + 1);
