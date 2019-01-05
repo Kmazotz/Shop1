@@ -563,8 +563,16 @@ input:scope {
 .container .wrap .itemPage .purchasable .contentPurchasable .imgPurchasable {
   width: 100%;
   height: auto;
-  min-height: 200px;
   background: #586473;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  align-content: center;
+}
+.container .wrap .itemPage .purchasable .contentPurchasable .imgPurchasable img {
+  width: 100%;
+  height: auto;
 }
 .container .wrap .itemPage .purchasable .contentPurchasable .infoPurchasable {
   width: 100%;
@@ -706,9 +714,16 @@ input:scope {
 }
 .shoppingCart .shoppingCartItems .cartItems .itemProperty .ImageIcon {
   width: 200px;
-  height: 150px;
+  height: auto;
   display: flex;
-  background: #586473;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.shoppingCart .shoppingCartItems .cartItems .itemProperty .ImageIcon img {
+  width: 100%;
+  height: auto;
 }
 .shoppingCart .shoppingCartItems .cartItems .itemProperty .removeItem {
   width: 50px;
@@ -938,8 +953,12 @@ footer .footTop .content ul li h5 {
 }
 footer .footTop .content ul li a {
   text-transform: none;
-  padding: 20px 0px;
   color: #586473;
+  transition-duration: 0.3s;
+  position: relative;
+}
+footer .footTop .content ul li a:hover {
+  color: #4A89AA;
 }
 footer .footBottom {
   width: 100%;
@@ -1122,7 +1141,8 @@ footer .footBottom .item p a {
   }
   .filter .filterControlls {
     display: flex;
-    flex-wrap: wrap;
+    position: relative;
+    top: -34px;
   }
   .filter .filterItems {
     display: flex;

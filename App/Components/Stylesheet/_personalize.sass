@@ -528,8 +528,16 @@ $white: #FFFFFF
           .imgPurchasable
             width: 100%
             height: auto
-            min-height: 200px
             background: $grey
+            display: flex
+            flex-wrap: wrap
+            align-items: center
+            align-content: center
+            align-content: center
+
+            img
+              width: 100%
+              height: auto
 
           .infoPurchasable
             width: 100%
@@ -670,9 +678,16 @@ $white: #FFFFFF
 
         .ImageIcon
           width: 200px
-          height: 150px
+          height: auto
           display: flex
-          background: $grey
+          flex-wrap: wrap
+          align-items: center
+          align-content: center
+          justify-content: center
+
+          img
+            width: 100%
+            height: auto
 
         .removeItem
             width: 50px
@@ -902,8 +917,12 @@ footer
           
           a
             text-transform: none
-            padding: 20px 0px
             color: $grey
+            transition-duration: .3s
+            position: relative
+
+            &:hover
+              color: $blue
 
   .footBottom
     width: 100%

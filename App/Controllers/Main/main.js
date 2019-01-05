@@ -91,6 +91,26 @@ $( document ).ready(function(){
 
     });
 
+    function imgEncrypt( val ){
+
+        let key = 'Empty';
+
+        let encrypted = CryptoJS.AES.encrypt( val, key );
+        let decrypted = CryptoJS.AES.decrypt( encrypted, key );
+
+        let compareEncrypt = decrypted.toString();
+
+        if ( compareEncrypt === decrypted.toString() ) {            
+
+            return decrypted.toString();
+
+        }
+
+        return false;
+
+    }
+    
+
     function getCountry( status ){
 
         var path = '/App/Components/Pictures/Flags/';
@@ -160,6 +180,7 @@ $( document ).ready(function(){
 
       $( 'a#OpenFilter' ).click(function(){
         $( 'div#filterOptions' ).addClass( 'active' );
+        window.scrollTo(0,0);
         $( 'body' ).addClass( 'active' );
       });
 
@@ -200,34 +221,40 @@ $( document ).ready(function(){
 
         function showCardsPurchasable(){
 
-        $( '#itemPage' ).text( '' );
+            let path = '/App/Components/Pictures/Products/';
 
-          for (var i = 0; i < displayRecords.length; i++) {
+            let format = '.jpg';
+
+            $( '#itemPage' ).text( '' );
+
+            for (var i = 0; i < displayRecords.length; i++) {
+
+            let Picture = imgEncrypt( displayRecords[i].productID );  
 
             $( '#itemPage' ).append(
         
-              '<div class="purchasable">'+
+                '<div class="purchasable">'+
                 '<div class="contentPurchasable">'+
-                  '<div class="imgPurchasable">'+
-
-                  '</div>'+
-                  '<div class="infoPurchasable">'+
+                    '<div class="imgPurchasable">'+
+                    '<img src="'+ path + displayRecords[i].productID +'/'+ Picture +'front'+ format +'" alt="'+ displayRecords[i].productID +'">'+
+                    '</div>'+
+                    '<div class="infoPurchasable">'+
                     '<span class="w-bold emphasis infoContent title">'+displayRecords[i].name+'</span>'+
                     '<span>'+
-                      '<span class="w-bold infoContent">Ref:</span>'+
-                      '<span class="w-light" id="productReference">'+displayRecords[i].productID+'</span>'+
+                        '<span class="w-bold infoContent">Ref:</span>'+
+                        '<span class="w-light" id="productReference">'+displayRecords[i].productID+'</span>'+
                     '</span>'+
                     '<span class="w-bold emphasis infoContent price">'+Dinero({ amount: convertToDineroFormat( displayRecords[i].unitPrice ) }).toFormat( '$0,0' )+'</span>'+
-                  '</div>'+
-                  '<div class="actionPurchasable">'+
+                    '</div>'+
+                    '<div class="actionPurchasable">'+
                     '<button id="addPurchase"><i class="fas fa-cart-plus"></i></button>'+
-                  '</div>'+
+                    '</div>'+
                 '</div>'+
-              '</div>'
+                '</div>'
 
             );
 
-          }
+            }
 
           $( 'button#addPurchase' ).click(function(){
 
@@ -469,12 +496,18 @@ $( document ).ready(function(){
 
         if ( notShow === false ) {
 
+            let path = '/App/Components/Pictures/Products/';
+
+            let format = '.jpg';
+
             $( 'div.cartItems' ).text( '' );
 
             for ( var i = 0; i < obj.length; i++ ) {
                 obj[i].total = 0;
                 obj[i].total = obj[i].unitPrice * obj[i].cant;
-        
+                let Picture = '';
+                Picture = imgEncrypt( obj[i].productID );
+
                 $( 'div.cartItems' ).each( function(){
             
                     $( this ).append( 
@@ -482,7 +515,7 @@ $( document ).ready(function(){
                         '<div class="item">'+
                             '<div class="itemProperty">'+
                             '<div class="ImageIcon">'+
-                
+                            '<img src="'+ path + obj[i].productID +'/'+ Picture +'front'+ format +'" alt="'+ obj[i].productID +'">'+
                             '</div>'+
                             '<div class="itemInfo">'+
                                 '<div class="infoCart">'+
