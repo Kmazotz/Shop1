@@ -963,5 +963,29 @@ footer
         a
           color: $neutral
 
+.notification
+  min-width: 200px
+  height: auto
+  line-height: 50px
+  background: $dark
+  display: flex
+  align-items: center
+  align-content: center
+  justify-content: center
+  position: fixed
+  right: 0px
+  bottom: 50px
+  z-index: 20000
+  transition-duration: .3s
+  transition-delay: .1s
+  transform: translateX( 200px )
+
+  &.active
+    transform: translateX(0)
+
+  p
+    font-size: 1.2em
+    color: $white
+
 
 

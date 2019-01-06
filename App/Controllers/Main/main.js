@@ -109,6 +109,20 @@ $( document ).ready(function(){
         return false;
 
     }
+
+    function TimeOut( msg ) {
+
+        $( 'p.notificationMsg' ).text( msg );
+
+        $( 'div#notification' ).addClass( 'active' );
+        
+        setTimeout(function(){
+
+        $( 'div#notification' ).removeClass( 'active' )
+
+        },1000);
+
+    }
     
 
     function getCountry( status ){
@@ -278,8 +292,9 @@ $( document ).ready(function(){
                 
                 if ( displayRecords[i].productID == children ) {                  
                   
-                  showPurchaseObj( displayRecords[i].productID );                  
-                  
+                  showPurchaseObj( displayRecords[i].productID );
+
+                  TimeOut( 'Producto agregado' );
                 }
                 
               }
@@ -333,7 +348,7 @@ $( document ).ready(function(){
             
                             cartObject[x].id = x;
                             cartObject[x].total =  cartObject[x].cant * cartObject[x].unitPrice;
-                            
+
                             x++;
                         }
                     }
@@ -753,6 +768,8 @@ $( document ).ready(function(){
                         $( 'div.cartItems' ).text('');
 
                         createElements( obj, true );
+
+                        TimeOut( 'Producto Eliminado' );
 
                     }
 

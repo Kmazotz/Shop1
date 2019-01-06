@@ -1000,6 +1000,31 @@ footer .footBottom .item p a {
   color: #E7DACB;
 }
 
+.notification {
+  min-width: 200px;
+  height: auto;
+  line-height: 50px;
+  background: #21374B;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  position: fixed;
+  right: 0px;
+  bottom: 50px;
+  z-index: 20000;
+  transition-duration: 0.3s;
+  transition-delay: 0.1s;
+  transform: translateX(200px);
+}
+.notification.active {
+  transform: translateX(0);
+}
+.notification p {
+  font-size: 1.2em;
+  color: #FFFFFF;
+}
+
 @media screen and (max-width: 900px) {
   .large-menu {
     display: none;
