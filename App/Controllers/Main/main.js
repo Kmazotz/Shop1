@@ -40,7 +40,7 @@ $( document ).ready(function(){
 
 
   //End Region
-
+  
   //Functions
 
   /**
@@ -118,9 +118,9 @@ $( document ).ready(function(){
         
         setTimeout(function(){
 
-        $( 'div#notification' ).removeClass( 'active' )
+        $( 'div#notification' ).removeClass( 'active' );
 
-        },1000);
+        },500);
 
     }
     
