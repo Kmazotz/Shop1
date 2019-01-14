@@ -76,7 +76,7 @@ $( document ).ready(function(){
 
     $.ajax({
 
-      url: "/App/Test/Products.json",
+      url: "../App/Test/Products.json",
       async: true,
       dataType: 'json',
 
@@ -127,7 +127,7 @@ $( document ).ready(function(){
 
     function getCountry( status ){
 
-        var path = '/App/Components/Pictures/Flags/';
+        var path = '../App/Components/Pictures/Flags/';
 
         $.get("https://api.ipdata.co?api-key=test", function (response) {
 
@@ -137,8 +137,10 @@ $( document ).ready(function(){
 
                 location = JSON.stringify(response.country_name, null, 4);
 
+                console.log( location );
+                
             }
-
+            
             for (let i = 0; i < countries.length; i++) {           
 
                 if ( countries[i].name === location.replace(/['"]+/g, '') ) {
@@ -235,7 +237,7 @@ $( document ).ready(function(){
 
         function showCardsPurchasable(){
 
-            let path = '/App/Components/Pictures/Products/';
+            let path = '../App/Components/Pictures/Products/';
 
             let format = '.jpg';
 
@@ -511,7 +513,7 @@ $( document ).ready(function(){
 
         if ( notShow === false ) {
 
-            let path = '/App/Components/Pictures/Products/';
+            let path = '../App/Components/Pictures/Products/';
 
             let format = '.jpg';
 

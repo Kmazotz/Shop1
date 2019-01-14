@@ -1,8 +1,23 @@
 {
+    "autoload":
+    {
+      "classmap":
+      [
+        
+      ]
+    },
     "require-dev": {
         "symfony/web-server-bundle": "^4.2"
     },
     "require": {
-        "catfan/medoo": "^1.6"
+        "symfony/http-kernel": "v4.1.7",
+        "symfony/http-foundation": "v4.1.7",
+        "symfony/routing": "v4.1.7",
+        "symfony/event-dispatcher": "v4.1.7",
+        "symfony/dependency-injection": "^4.1",
+        "catfan/medoo": "v1.6",
+        "symfony/validator": "v4.1.7",
+        "symfony/security": "^4.1",
+        "symfony/config": "^4.1"
     }
 }
